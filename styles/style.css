@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --white: #FFF;
+    --primary-green: #00EA40;
+    --secondary-green: #09DCC1;
+    --dark-gray: #212529;
+    --medium-gray: #3a3c3d;
+    --light-gray: #a8a8a8;
+    --lightest-gray: #dbdbdb;
+    --black: #000;
+    --green-gradient: linear-gradient(-45deg, var(--secondary-green) 35%, var(--primary-green) 100%);
+
+    --transition-time: .15s ease-in-out;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--black) 25%, var(--medium-gray) 75%, var(--light-gray) 100%);
+    
+    gap: 0.9rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 6rem 0rem 6rem;
+}
+
+#headerLogo img {
+    width: 5%;
+    opacity: 0.6;
+    transition: var(--transition-time);
+}
+
+#headerLogo img:hover {
+    opacity: 1;
+}
+
+#headerMenu ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerMenu ul li {
+    padding: 0 1rem;
+}
+
+#headerMenu ul li:first-child {
+    padding-left: 0;
+}
+
+#headerMenu ul li:last-child {
+    padding-right: 0;
+}
+
+#headerMenu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+#headerMenu ul li a::after {
+    content: " ";
+    width: 0%;
+    height: 1px;
+    background: var(--green-gradient);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+#headerMenu ul li a:hover::after {
+    width: 100%;
+}
+
+#headerMenu ul li a:hover {
+    color: var(--white);
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+footer {
+    display: none;
+}
+
+#leftSection {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    gap: 1.5rem;
+}
+
+#rightSection {
+    width: 40%;
+    display: flex;
+    padding: 1.5rem 6rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#rightSection > img {
+    min-width: 85%;
+    max-width: 100%;
+}
+
+.card {
+    cursor: pointer;
+    position: absolute;
+    animation: float 2.5s ease-in-out infinite;
+    left: 0;
+}
+
+#mobileCard > img {
+    animation: float 2.5s ease-in-out infinite;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+}
+
+#titleDinari {
+    color: var(--white);
+    font-size: 4.5rem;
+}
+
+#titleDinari img {
+    width: 55%;
+}
+
+#mobileMenu { 
+    display: none;
+}
+
+#titleText {
+    background: linear-gradient(-45deg, var(--secondary-green) 35%, #55f880 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#titleTextTwo {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: normal;
+}
+
+#benefits ul {
+    list-style-type: none;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#benefits ul li {
+    color: var(--dark-gray);
+    background: var(--light-gray);
+    border-radius: 0.3rem;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 33.3%;
+    cursor: pointer;
+}
+
+#benefits ul li:hover {
+    background: var(--green-gradient);
+    animation: float 2s ease-in-out infinite;
+    color: white;
+}
+
+#benefits ul li:hover i {
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#benefits ul li i {
+    font-size: 2.5rem;
+}
+
+#media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#media ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#media ul li a {
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    transition: var(--transition-time);
+}
+
+#media ul li a:hover {
+    color: var(--white);
+}
+
+#media p {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: var(--black);
+    transition: var(--transition-time);
+}
+
+button:hover {
+    background: var(--green-gradient);
+}
+
+#showMenu { 
+    display: none;
+}
+
+#mobileCard {
+    display: none;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0);
+	}
+	50%{
+		transform:translatey(-15px);
+	}
+}
+
+#benefits h3 {
+    display: none;
+}
+
+#mobileMenu {
+    background-color: var(--black);
+    padding: 2rem 1.5rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: 0.6s ease-in-out;
+    z-index: 1;
+    display: none;
+}
+
+#mobileMenu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#mobileMenu ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+#mobileMenu ul li a:hover {
+    color: var(--white);
+}
+
+.isHide {
+    top: -300%;
+}
+
+.isOpen {
+    top: 100%;
+}
+
+#showMenu {
+    display: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0;
+    font-weight: normal;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: var(--white);
+    padding: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mobileCard {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    position: relative;
+}
+
+#mobileMedia {
+    position: absolute;
+    top: 0;
+    right: 0;
+    list-style: none;
+    display: none;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#mobileMedia li a {
+    color: var(--light-gray);
+    font-size: 1.8rem;
+}
+
+#mobileMedia li a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 0;
+    }
+
+    #showMenu {
+        display: block;
+    }
+
+    #mobileCard {
+        display: flex;
+    }
+
+    header {
+        width: 100%;
+        border-bottom: 1px solid var(--dark-gray);
+        position: fixed;
+        padding: 1rem 1.5rem;
+        background-color: black;
+        z-index: 2;
+    }
+
+    #headerLogo img {
+        width: 6.5%;
+        opacity: 1;
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 0;
+    }
+
+    #leftSection, #rightSection {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 1.75rem;
+    }
+
+    #headerMenu {
+        display: none;
+    }
+
+    #titleDinari img {
+        width: 85%;
+    }
+
+    #titleText {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #titleTextTwo {
+        color: var(--white);
+        font-size: 1.2rem;
+    }
+
+    button {
+        display: none;
+    }
+
+    #benefits {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #benefits h3 {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    #benefits ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #benefits ul li {
+        width: 100%;
+        padding: 3rem;
+        font-size: 1.5rem;
+    }
+
+    #benefits ul li:hover {
+        animation: none;
+    }
+
+    #desktopCard {
+        display: none;
+    }
+
+    #media {
+        display: none;
+    }
+
+    #mobileMedia {
+        display: flex;
+    }
+
+    #media ul {
+        display: none;
+    }
+    
+    #rightSection {
+        display: none;
+    }
+
+    #mobileMenu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+        padding: 3rem 3rem 0 3rem;
+        transition: 0.9s ease-in-out;
+    }
+
+    #leftSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem 3rem;
+    }
+
+    #rightSection {
+        display: none;
+    }
+
+    #title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #titleDinari {
+        width: 100%;
+    
+    }
+
+    #titleTextTwo {
+        color: var(--white);
+    }
+
+
+    #headerMenu {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    #showMenu {
+        display: block;
+    }
+
+    #mobileMenu {
+        display: block;
+        padding: 2rem 3rem;
+    }
+
+    .headerIsOpen {
+        background-color: black;
+    }
+
+    .headerIsOpen #headerLogo img {
+        opacity: 1;
+    }
+
+    #media {
+        display: none;
+    }
+
+    #benefits ul li {
+        padding: 3rem 3rem;
+    }
+
+    footer {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    #mobileCard {
+        display: flex;
+    }
+
+    #mobileMedia {
+        display: flex;
+    }
+}
