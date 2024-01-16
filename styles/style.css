@@ -136,6 +136,7 @@ footer {
 
 #mobileCard > img {
     animation: float 2.5s ease-in-out infinite;
+    max-width: 95%;
 }
 
 #title {
@@ -157,9 +158,7 @@ footer {
 }
 
 #titleText {
-    background: linear-gradient(-45deg, var(--secondary-green) 35%, #55f880 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--light-gray);
     margin-bottom: 1.25rem;
     font-size: 2rem;
     font-weight: bold;
@@ -302,7 +301,7 @@ button:hover {
 #mobileMenu ul li a {
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--light-gray);
+    color: var(--lightest-gray);
 }
 
 #mobileMenu ul li a:hover {
