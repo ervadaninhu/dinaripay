@@ -136,8 +136,8 @@ footer {
 
 #mobileCard > img {
     animation: float 2.5s ease-in-out infinite;
-    height: 100%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: fill;
 }
 
 #title {
