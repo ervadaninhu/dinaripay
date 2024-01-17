@@ -24,7 +24,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, var(--black) 25%, var(--medium-gray) 75%, var(--light-gray) 100%);
+    background: linear-gradient(135deg, var(--black) 25%, var(--medium-gray) 55%, #46b965e5 75%, #37c5b2e5 90%, #081a17 100%);
     
     gap: 0.9rem;
 }
@@ -342,7 +342,7 @@ button:hover {
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(26, 26, 26);
     padding: 1rem;
     font-size: 0.9rem;
     color: var(--white);
@@ -350,6 +350,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.295);
 }
 
 footer a {
@@ -393,6 +394,7 @@ footer a {
 @media screen and (max-width: 767px) {
     body {
         padding: 0;
+        background: linear-gradient(135deg, var(--black) 25%, var(--dark-gray) 55%, var(--medium-gray) 75%, var(--light-gray) 100%);
     }
 
     #showMenu {
@@ -520,6 +522,7 @@ footer a {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     body {
         padding: 0;
+        background: linear-gradient(135deg, var(--black) 25%, var(--dark-gray) 55%, var(--medium-gray) 75%, var(--light-gray) 100%);
     }
 
     main {
