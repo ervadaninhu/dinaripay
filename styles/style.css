@@ -124,7 +124,7 @@ footer {
 
 #rightSection > img {
     min-width: 85%;
-    max-width: 100%;
+    max-width: 95%;
 }
 
 .card {
@@ -175,11 +175,8 @@ footer {
     list-style-type: none;
     font-size: 1.2rem;
 
-    gap: 1rem;
-
-    display: -ms-flexbox;
-    display: -webkit-flexbox;
     display: flex;
+    gap: 1rem;
 }
 
 #benefits ul li {
@@ -569,6 +566,10 @@ footer {
 
     #mobileCard {
         display: flex;
+    }
+
+    #mobileCard > img {
+        width: 60%;
     }
 
     #mobileMedia {
