@@ -357,10 +357,6 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    color: var(--light-gray);
-}
-
 #mobileCard {
     width: 100%;
     display: none;
