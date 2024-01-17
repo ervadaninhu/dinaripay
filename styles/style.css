@@ -136,7 +136,8 @@ footer {
 
 #mobileCard > img {
     animation: float 2.5s ease-in-out infinite;
-    height: 100%;
+    width: fit-content;
+    max-height: fit-content;
 }
 
 #title {
@@ -340,6 +341,7 @@ footer {
     display: none;
     justify-content: center;
     position: relative;
+    background-color: purple;
 }
 
 #mobileMedia {
