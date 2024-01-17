@@ -613,6 +613,10 @@ footer {
         display: flex;
     }
 
+    #mobileMenu {
+        background-color: black;
+    }
+
     #benefits h3 {
         display: block;
     }
