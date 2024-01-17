@@ -279,7 +279,14 @@ button:hover {
 }
 
 #benefits h3 {
+    color: white;
+    font-size: 2rem;
     display: none;
+    margin-bottom: 1.5rem;
+}
+
+#benefits h3 i {
+    color: var(--secondary-green);
 }
 
 #mobileMenu {
@@ -297,7 +304,14 @@ button:hover {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+}
+
+#mobileMenu li {
+    margin-bottom: 2rem;
+}
+
+#mobileMenu li:last-child {
+    margin-bottom: 0;
 }
 
 #mobileMenu ul li a {
@@ -335,6 +349,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 #mobileCard {
@@ -436,19 +451,18 @@ footer {
     }
 
     #benefits {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     #benefits h3 {
-        color: white;
-        font-size: 1.5rem;
         display: block;
-        margin-bottom: 1.5rem;
     }
 
     #benefits ul {
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -458,7 +472,7 @@ footer {
     #benefits ul li {
         width: 100%;
         padding: 3rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-bottom: 1.5rem;
     }
 
@@ -569,6 +583,13 @@ footer {
         display: none;
     }
 
+
+    #benefits{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     #benefits ul li {
         padding: 3rem 3rem;
     }
@@ -588,5 +609,9 @@ footer {
 
     #mobileMedia {
         display: flex;
+    }
+
+    #benefits h3 {
+        display: block;
     }
 }
